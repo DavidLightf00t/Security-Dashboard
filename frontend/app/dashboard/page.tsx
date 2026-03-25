@@ -1,5 +1,12 @@
-export default function Dashboard(){
-	return (
-		<h1>Security Dashboard</h1>
-	);
+import { auth0 } from "@/lib/auth0";
+import { redirect } from "next/navigation";
+
+export default async function DashboardPage() {
+  const session = await auth0.getSession();
+
+  if (!session) {
+    redirect("/sign-in");
+  }
+
+  return <div>Welcome, {session.user.name ?? session.user.email}</div>;
 }
