@@ -1,5 +1,5 @@
-export default function SignUp() {
-	return (
-		<h1>Sign Up Page</h1>
-	);
+import { redirect } from "next/navigation";
+
+export default function SignUpPage() {
+  redirect("/auth/login?screen_hint=signup&returnTo=/dashboard")
 }

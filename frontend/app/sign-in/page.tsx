@@ -1,5 +1,5 @@
+import { redirect } from "next/navigation";
+
 export default function SignIn() {
-	return (
-		<h1>Sign In Page</h1>
-	);
+  redirect("/auth/login?returnTo=/dashboard"); 
 }
