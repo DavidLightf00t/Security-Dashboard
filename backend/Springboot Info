@@ -1,0 +1,9 @@
+Controller = handles HTTP requests
+Model = represents data generally for databases DTOs as well
+Repository = Database access layer
+	How the app talks to the database
+Service = Business logic
+	Validating data
+	Combining repo calls
+	decide what happens when something is created/updated
+	Apply logic
